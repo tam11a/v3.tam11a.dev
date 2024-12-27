@@ -1,0 +1,24 @@
+---
+import Header from "../components/header.astro"
+import Footer from "../components/footer.astro"
+
+const {
+    title = "Portfolio | Ibrahim Sadik Tamim",
+    description = "A Digital Creator & Software Engineer based in Bangladesh",
+} = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+    </head>
+    <body>
+        <Header />
+        <slot />
+        <Footer />
+    </body>
+</html>
