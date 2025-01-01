@@ -1,24 +1,28 @@
 ---
-import Header from "../components/header.astro"
-import Footer from "../components/footer.astro"
+import "./global.css";
+import Header from "../_components/header/main.astro";
+import Footer from "../_components/footer/main.astro";
 
 const {
-    title = "Portfolio | Ibrahim Sadik Tamim",
-    description = "A Digital Creator & Software Engineer based in Bangladesh",
+  title = "Portfolio | Ibrahim Sadik Tamim",
+  description = "A Digital Creator & Software Engineer based in Bangladesh",
 } = Astro.props;
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
-        <meta name="description" content={description} />
-    </head>
-    <body>
-        <Header />
-        <slot />
-        <Footer />
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <Header />
+    <main class="min-h-[70svh] container mx-auto">
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
