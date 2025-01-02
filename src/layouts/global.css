@@ -125,6 +125,10 @@
   }
 
   .social-link {
-    @apply text-offcolor hover:text-slate-400 inline-flex items-center gap-2 text-sm font-semibold [&>svg]:text-lg;
+    @apply text-offcolor hover:text-slate-300 transition-colors inline-flex items-center gap-2 text-sm font-semibold [&>svg]:text-lg;
+  }
+
+  .footer-link {
+    @apply social-link text-xs md:text-sm font-normal;
   }
 }
