@@ -5,8 +5,16 @@ import { getCollection } from "astro:content";
 const featured = await getCollection("featured");
 ---
 
-<section>
-  <ul class="inline-flex justify-between">
+<section
+  class="relative cursor-pointer [&:hover>a]:inline [&:hover>a]:opacity-100 [&:hover>a]:scale-100 [&:hover>ul]:scale-95 [&>*]:transition-all [&:hover>ul>li>img]:blur-md"
+>
+  <a
+    href="/work"
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-gradient drop-shadow-black drop-shadow-md hidden scale-0 opacity-0"
+  >
+    crafted for many startup, corporate and brands
+  </a>
+  <ul class="inline-flex items-center justify-between px-3 gap-2 py-10">
     {
       featured.map(({ data: { logo, company } }) => (
         <li>
@@ -16,7 +24,7 @@ const featured = await getCollection("featured");
             loading="eager"
             width="256"
             height="256"
-            class={"h-14"}
+            class={"h-12 saturate-0"}
           />
         </li>
       ))

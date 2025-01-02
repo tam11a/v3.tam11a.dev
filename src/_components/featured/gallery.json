@@ -1,5 +1,11 @@
 [
   {
+    "slug": "definedsolution",
+    "logo": "/featured/definedsolution.svg",
+    "company": "Defined Solution",
+    "company_url": "https://definedsolution.com"
+  },
+  {
     "slug": "fascino",
     "logo": "/featured/fascino.svg",
     "company": "Fascino",

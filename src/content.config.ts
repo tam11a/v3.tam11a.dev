@@ -9,6 +9,7 @@ const featured = defineCollection({
     },
   }),
   schema: z.object({
+    slug: z.string(),
     logo: z.string(),
     company: z.string(),
     company_url: z.string().url().optional(),
