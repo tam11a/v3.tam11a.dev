@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+const featured = await getCollection("featured");
+---
+
+<section>
+  <ul class="inline-flex justify-between">
+    {
+      featured.map(({ data: { logo, company } }) => (
+        <li>
+          <Image
+            src={logo}
+            alt={company}
+            loading="eager"
+            width="256"
+            height="256"
+            class={"h-14"}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</section>
