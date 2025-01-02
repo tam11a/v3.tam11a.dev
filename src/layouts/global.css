@@ -104,6 +104,10 @@
     @apply bg-gradient-logo bg-clip-text text-transparent;
   }
 
+  .text-ds-gradient {
+    @apply bg-gradient-ds bg-clip-text text-transparent;
+  }
+
   .child-gradient {
     @apply [&>span]:text-gradient;
   }

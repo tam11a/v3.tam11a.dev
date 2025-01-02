@@ -59,6 +59,7 @@ export default {
       },
       backgroundImage: {
         "gradient-logo": `linear-gradient(90deg, #00FF8F 0%, #00A1FF 100%)`,
+        "gradient-ds": `linear-gradient(90deg, #EC5276 0%, #A51763 100%)`,
       },
       fontFamily: {
         sans: ["Outfit", "system-ui", "sans-serif"],
