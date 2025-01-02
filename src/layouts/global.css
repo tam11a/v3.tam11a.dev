@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Covered+By+Your+Grace&family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Macondo&family=Outfit:wght@100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -99,6 +99,7 @@
   body {
     @apply bg-background text-foreground;
   }
+
   .text-gradient {
     @apply bg-gradient-logo bg-clip-text text-transparent;
   }
@@ -109,5 +110,17 @@
 
   .clip-title {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .container {
+    @apply mx-auto !max-w-3xl p-4;
+  }
+
+  .text-offcolor {
+    @apply text-slate-500;
+  }
+
+  .social-link {
+    @apply text-offcolor hover:text-slate-400 inline-flex items-center gap-2 text-sm font-semibold [&>svg]:text-lg;
   }
 }

@@ -1,7 +1,43 @@
 ---
-import MainLayout from "../layouts/main.astro"
+import MainLayout from "../layouts/main.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <MainLayout>
-	Hello, world!
+  <!-- HERO -->
+  <div class="space-y-4">
+    <!-- INTRO -->
+    <h1 class="font-serif text-2xl sm:text-4xl md:text-5xl">
+      Hi, I'm Ibrahim Sadik Tamim,
+      <br />
+      co-founder & software engineer
+      <br />
+      at <a href="https://definedsolution.com" class="font-bold"
+        >Defined Solution</a
+      >.
+    </h1>
+
+    <!-- SOCIAL -->
+    <div class="flex gap-6 flex-row flex-wrap py-3">
+      <a href="#" class="social-link"><Icon name="lucide:github" /> GitHub</a>
+      <a href="#" class="social-link"
+        ><Icon name="lucide:linkedin" /> LinkedIn</a
+      >
+      <a href="#" class="social-link"><Icon name="lucide:youtube" /> YouTube</a>
+    </div>
+
+    <!-- ABOUT -->
+    <p class="sm:text-lg">
+      A Digital Creator & Software Engineer based in Bangladesh. I love to
+      create digital products that solve real-world problems. I'm passionate
+      about building scalable, maintainable, and user-friendly software.
+    </p>
+
+    <p class="text-offcolor sm:text-lg">
+      Building what I love at <a
+        href="https://definedsolution.com"
+        class="font-bold text-gradient">@definedsolution</a
+      >.
+    </p>
+  </div>
 </MainLayout>

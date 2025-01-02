@@ -62,7 +62,7 @@ export default {
       },
       fontFamily: {
         sans: ["Outfit", "system-ui", "sans-serif"],
-        bebas: ["Bebas Neue", "system-ui", "sans-serif"],
+        serif: ["Macondo", "serif"],
         cursive: ["Covered By Your Grace", "cursive"],
       },
     },
