@@ -97,7 +97,22 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground relative;
+  }
+
+  body:before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    z-index: -100;
+    top: 0;
+    opacity: 50%;
+    background-image: url(/header-gradient.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1400px;
+    /* Blur */
+    filter: blur(30px);
   }
 
   .text-gradient {
@@ -109,7 +124,7 @@
   }
 
   .child-gradient {
-    @apply [&>span]:text-gradient;
+    @apply [&>span]:text-gradient [&>svg]:text-gradient;
   }
 
   .clip-title {
@@ -117,7 +132,7 @@
   }
 
   .container {
-    @apply mx-auto !max-w-3xl p-4;
+    @apply mx-auto !max-w-3xl p-4 !overflow-visible;
   }
 
   .text-offcolor {
@@ -126,6 +141,10 @@
 
   .social-link {
     @apply text-offcolor hover:text-slate-300 transition-colors inline-flex items-center gap-2 text-sm font-semibold [&>svg]:text-lg;
+  }
+
+  .sayhi-link {
+    @apply text-gradient inline-flex items-center gap-2 text-sm font-semibold [&>svg]:text-[#00FF8F];
   }
 
   .footer-link {
