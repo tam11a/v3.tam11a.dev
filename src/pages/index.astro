@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import MainLayout from "../layouts/main.astro";
+import FeaturedGallery from "../_components/featured/gallery.astro";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -39,19 +40,22 @@ import { Icon } from "astro-icon/components";
       solutions.
     </p>
 
-    <h2 class="text-offcolor sm:text-lg pb-20">
+    <h2 class="text-offcolor sm:text-lg">
       Currently bringing ideas to life at <a
         href="https://definedsolution.com"
         class="font-semibold text-gradient">@definedsolution</a
       >.
     </h2>
 
+    <!-- FEATURED GALLERY -->
+    <FeaturedGallery />
+
     <!-- SAY HI! -->
     <div
-      class="mt-20 bg-gradient-to-r from-[#00FF8F0f] to-[#00A1FF0f] !bg-opacity-5 py-12 px-10 rounded-xl shadow flex flex-col-reverse md:flex-row gap-10 items-start md:items-center justify-between max-w-sm md:max-w-none"
+      class="mt-20 bg-gradient-to-r from-[#00FF8F0f] to-[#00A1FF0f] !bg-opacity-5 py-7 sm:py-12 px-7 sm:px-10 rounded-xl shadow flex flex-col-reverse md:flex-row gap-10 items-start md:items-center justify-between max-w-sm md:max-w-none"
     >
       <div class="flex-[0.6]">
-        <h3 class="text-4xl font-semibold text-gradient">Say hi!</h3>
+        <h3 class="text-4xl font-semibold text-gradient w-fit">Say hi!</h3>
         <div class="flex gap-6 flex-row flex-wrap py-6">
           <a href="mailto:ibrahimsadiktamim@gmail.com" class="sayhi-link"
             ><Icon name="lucide:mail" /> Mail</a
