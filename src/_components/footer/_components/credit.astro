@@ -1,13 +1,16 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
 
-<div class="text-center text-xs space-y-2">
-  <p>All Rights Reserved &copy; 2025</p>
-  <p>
-    Built with <a href="https://astro.build" class="text-[#ff5607]">Astro</a> by
-    <a href="https://tam11a.dev" class="text-gradient font-semibold"
-      >Ibrahim Sadik Tamim</a
+<div
+  class="text-xs gap-10 py-20 flex flex-col md:flex-row items-center justify-between"
+>
+  <p class="text-offcolor">&copy;tam11a ✦ Ibrahim Sadik Tamim</p>
+  <p class="inline-flex items-center justify-center gap-1 text-offcolor">
+    Built with <a href="https://astro.build" class="text-lg"
+      ><Icon name="vscode-icons:file-type-astro" /></a
+    > and <a href="https://tailwindcss.com" class="text-lg"
+      ><Icon name="vscode-icons:file-type-tailwind" /></a
     >
   </p>
 </div>
