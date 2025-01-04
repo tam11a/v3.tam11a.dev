@@ -1,6 +1,6 @@
 # Portfolio Site - v3
 
-![Site Screenshot](https://github.com/tam11a/v3.tam11a.dev/blob/master/public/og.jpg?raw=true)
+![Site Screenshot](https://github.com/tam11a/v3.tam11a.dev/blob/master/public/og.jpg)
 
 ## 🧞 Commands
 
