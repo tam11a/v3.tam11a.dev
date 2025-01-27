@@ -16,7 +16,7 @@ const featured = await getCollection("featured");
   </a>
   <div class="relative flex overflow-x-hidden gap-2">
     <ul
-      class={`inline-flex py-5 items-center justify-between gap-2 animate-marquee1`}
+      class={`inline-flex py-10 items-center justify-between gap-2 animate-marquee1`}
     >
       {
         featured.map(({ data: { logo, company } }) => (
@@ -34,7 +34,7 @@ const featured = await getCollection("featured");
       }
     </ul>
     <ul
-      class={`py-5 absolute top-0 inline-flex w-full items-center justify-between gap-2 animate-marquee2`}
+      class={`py-10 absolute top-0 inline-flex w-full items-center justify-between gap-2 animate-marquee2`}
     >
       {
         featured.map(({ data: { logo, company } }) => (
