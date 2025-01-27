@@ -6,6 +6,7 @@
 
 @layer base {
   :root {
+    --ds: 346 80% 62%;
     --background: 228 19% 5%;
     --foreground: 213 26.8% 83.9%;
 
@@ -15,10 +16,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 154 154% 50%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 202 202% 50%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -160,6 +161,10 @@
   }
 
   .linktree-btn {
-    @apply border border-slate-800 py-3 px-4 w-full flex flex-row items-center justify-between gap-2 rounded-xl text-lg [&>svg]:text-xl;
+    @apply border border-slate-800 py-3 px-4 w-full flex flex-row items-center justify-between gap-2 rounded-xl text-lg [&>svg]:text-xl relative overflow-hidden [&:hover>.hover-card]:w-full [&:hover>.hover-card]:h-full [&>.hover-card]:transition-all;
+  }
+
+  .hover-card {
+    @apply absolute bg-gradient-logo w-0 h-0 top-0 left-0 opacity-5 -z-30 animate-in animate-out;
   }
 }

@@ -37,6 +37,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        ds: {
+          DEFAULT: "hsl(var(--ds))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -60,12 +63,17 @@ export default {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0%)" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         marquee1: "marquee1 20s linear infinite",
         marquee2: "marquee2 20s linear infinite",
+        float: "float 3s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-logo": `linear-gradient(90deg, #00FF8F 0%, #00A1FF 100%)`,

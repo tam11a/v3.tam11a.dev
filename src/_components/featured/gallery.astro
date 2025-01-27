@@ -14,38 +14,38 @@ const featured = await getCollection("featured");
   >
     crafted for a few startup, corporate and brands
   </a>
-  <div class="relative flex overflow-x-hidden gap-2">
+  <div class="relative flex overflow-x-hidden gap-10">
     <ul
-      class={`inline-flex py-10 items-center justify-between gap-2 animate-marquee1`}
+      class={`inline-flex w-full py-10 items-center justify-evenly gap-10 animate-marquee1`}
     >
       {
         featured.map(({ data: { logo, company } }) => (
-          <li>
+          <li class="flex-1">
             <Image
               src={logo}
               alt={company}
               loading="eager"
               width="256"
               height="256"
-              class={"h-12 saturate-0"}
+              class={"h-12 w-fit saturate-0"}
             />
           </li>
         ))
       }
     </ul>
     <ul
-      class={`py-10 absolute top-0 inline-flex w-full items-center justify-between gap-2 animate-marquee2`}
+      class={`py-10 absolute top-0 inline-flex w-full items-center justify-evenly gap-10 animate-marquee2`}
     >
       {
         featured.map(({ data: { logo, company } }) => (
-          <li>
+          <li class="flex-1">
             <Image
               src={logo}
               alt={company}
               loading="eager"
               width="256"
               height="256"
-              class={"h-12 saturate-0"}
+              class={"h-12 w-fit saturate-0"}
             />
           </li>
         ))
