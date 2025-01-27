@@ -52,10 +52,20 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        marquee1: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        marquee2: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        marquee1: "marquee1 20s linear infinite",
+        marquee2: "marquee2 20s linear infinite",
       },
       backgroundImage: {
         "gradient-logo": `linear-gradient(90deg, #00FF8F 0%, #00A1FF 100%)`,
