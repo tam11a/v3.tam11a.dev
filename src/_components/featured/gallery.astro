@@ -6,7 +6,7 @@ const featured = await getCollection("featured");
 ---
 
 <section
-  class="relative cursor-pointer [&:hover>a]:inline [&:hover>a]:opacity-100 [&:hover>a]:scale-100 [&:hover>ul]:scale-95 [&>*]:transition-all [&:hover>ul>li>img]:blur-md"
+  class="relative cursor-pointer [&:hover>a]:inline [&:hover>a]:opacity-100 [&:hover>a]:scale-100 [&:hover>div>ul]:scale-95 [&>*]:transition-all [&:hover>div>ul>li>img]:blur-md"
 >
   <a
     href="/#work"
@@ -14,20 +14,42 @@ const featured = await getCollection("featured");
   >
     crafted for a few startup, corporate and brands
   </a>
-  <ul class="inline-flex items-center justify-between px-3 gap-2 py-10">
-    {
-      featured.map(({ data: { logo, company } }) => (
-        <li>
-          <Image
-            src={logo}
-            alt={company}
-            loading="eager"
-            width="256"
-            height="256"
-            class={"h-12 saturate-0"}
-          />
-        </li>
-      ))
-    }
-  </ul>
+  <div class="relative flex overflow-x-hidden gap-2">
+    <ul
+      class={`inline-flex py-5 items-center justify-between gap-2 animate-marquee1`}
+    >
+      {
+        featured.map(({ data: { logo, company } }) => (
+          <li>
+            <Image
+              src={logo}
+              alt={company}
+              loading="eager"
+              width="256"
+              height="256"
+              class={"h-12 saturate-0"}
+            />
+          </li>
+        ))
+      }
+    </ul>
+    <ul
+      class={`py-5 absolute top-0 inline-flex w-full items-center justify-between gap-2 animate-marquee2`}
+    >
+      {
+        featured.map(({ data: { logo, company } }) => (
+          <li>
+            <Image
+              src={logo}
+              alt={company}
+              loading="eager"
+              width="256"
+              height="256"
+              class={"h-12 saturate-0"}
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </section>
