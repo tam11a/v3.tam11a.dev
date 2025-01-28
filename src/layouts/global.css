@@ -117,11 +117,11 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-logo bg-clip-text text-transparent;
+    @apply bg-gradient-logo bg-clip-text text-transparent bg-cover;
   }
 
   .text-ds-gradient {
-    @apply bg-gradient-ds bg-clip-text text-transparent;
+    @apply bg-gradient-ds bg-clip-text text-transparent bg-cover;
   }
 
   .child-gradient {
