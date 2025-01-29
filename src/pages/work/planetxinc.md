@@ -1,7 +1,7 @@
 ---
 name: "Planet X Inc."
-logo: "/featured/planetxinc.svg"
-featured: true
+logo: "/work/planetxinc.svg"
+featured: "/featured/planetxinc.svg"
 role: "Jr. Full-Stack Engineer"
 type: "Full-time"
 timeline: "2021"

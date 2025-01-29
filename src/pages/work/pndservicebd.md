@@ -1,7 +1,7 @@
 ---
 name: "PND Service Bangladesh"
-logo: "/featured/pndservicebd.svg"
-featured: true
+logo: "/work/pndservicebd.svg"
+featured: "/featured/pndservicebd.svg"
 role: "Frontend Engineer"
 type: "Contractual"
 timeline: "2022"

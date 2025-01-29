@@ -3,11 +3,11 @@ import { defineCollection, z } from "astro:content";
 
 const featured = defineCollection({
   type: "content_layer",
-  loader: glob({ pattern: "**/*.md", base: "./src/pages/work" }),
+  loader: glob({ pattern: "**/*.(md|mdx)", base: "./src/pages/work" }),
   schema: z.object({
     name: z.string(),
     logo: z.string(),
-    featured: z.boolean().optional(),
+    featured: z.string().optional(),
     role: z.string(),
     type: z.string(),
     timeline: z.string(),

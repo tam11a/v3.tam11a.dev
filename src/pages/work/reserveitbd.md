@@ -1,7 +1,7 @@
 ---
 name: "Reserveit Bangladesh"
-logo: "/featured/reserveitbd.svg"
-featured: true
+logo: "/work/reserveitbd.svg"
+featured: "/featured/reserveitbd.svg"
 role: "Full-Stack Engineer"
 type: "Full-time"
 timeline: "2021-2023"
