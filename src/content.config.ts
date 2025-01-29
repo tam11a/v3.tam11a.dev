@@ -1,18 +1,16 @@
-import { file } from "astro/loaders";
+import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
 const featured = defineCollection({
   type: "content_layer",
-  loader: file("src/_components/featured/gallery.json", {
-    parser(text) {
-      return JSON.parse(text);
-    },
-  }),
+  loader: glob({ pattern: "**/*.md", base: "./src/pages/work" }),
   schema: z.object({
-    slug: z.string(),
+    name: z.string(),
     logo: z.string(),
-    company: z.string(),
-    company_url: z.string().url().optional(),
+    featured: z.boolean().optional(),
+    role: z.string(),
+    type: z.string(),
+    timeline: z.string(),
   }),
 });
 
