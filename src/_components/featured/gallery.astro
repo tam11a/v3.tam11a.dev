@@ -10,13 +10,13 @@ const featured = await getCollection("featured");
     <section class="relative cursor-pointer [&:hover>a]:opacity-100 [&:hover>a]:scale-100 [&>*]:transition-all [&>*]:duration-500 [&>*]:ease-in-out [&>div>ul>li>img]:transition-opacity [&>div>ul>li>img]:duration-500 [&>div>ul>li>img]:ease-in-out [&:hover>div>ul>li>img]:opacity-40">
       <a
         href="/work"
-        class="absolute rounded-xl top-0 left-0 flex flex-row w-full h-full items-center justify-center backdrop-blur-md z-10 text-gradient drop-shadow-black drop-shadow-md scale-0 opacity-0 text-center"
+        class="absolute rounded-xl top-0 left-0 flex flex-row w-full h-full items-center justify-center backdrop-blur-sm z-10 text-gradient scale-0 opacity-0 text-center"
       >
         crafted for a few startup, corporate and brands
       </a>
       <div class="relative flex overflow-x-hidden gap-10">
         <ul
-          class={`inline-flex w-full py-10 items-center justify-evenly gap-10 animate-marquee1 transition-all`}
+          class={`inline-flex w-fit items-center justify-between px-5 my-5 sm:my-10 gap-10 animate-marquee1 transition-all`}
         >
           {featured
             ?.filter((v) => !!v.data.featured)
@@ -28,13 +28,13 @@ const featured = await getCollection("featured");
                   loading="eager"
                   width="256"
                   height="256"
-                  class={"h-12 w-fit saturate-0"}
+                  class={"w-24 h-24 min-w-16 saturate-0"}
                 />
               </li>
             ))}
         </ul>
         <ul
-          class={`py-10 absolute top-0 inline-flex w-full items-center justify-evenly gap-10 animate-marquee2 transition-all`}
+          class={`px-5 my-5 sm:my-10 absolute top-0 inline-flex w-fit items-center justify-between gap-10 animate-marquee2 transition-all`}
         >
           {featured
             ?.filter((v) => !!v.data.featured)
@@ -46,7 +46,7 @@ const featured = await getCollection("featured");
                   loading="eager"
                   width="256"
                   height="256"
-                  class={"h-12 w-fit saturate-0"}
+                  class={"w-24 h-24 min-w-16 saturate-0"}
                 />
               </li>
             ))}

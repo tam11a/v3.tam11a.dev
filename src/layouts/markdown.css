@@ -2,11 +2,11 @@
 
 @layer base {
   h1 {
-    @apply text-xl font-bold my-4 text-slate-500;
+    @apply my-4 text-slate-500 uppercase;
   }
 
   p {
-    @apply text-justify my-4;
+    @apply text-sm my-4;
   }
 
   ul,
@@ -15,6 +15,6 @@
   }
 
   li {
-    @apply my-2;
+    @apply text-sm my-2;
   }
 }
