@@ -9,7 +9,7 @@ const setLayout = () => {
   // @ts-ignore
   return function (_, file) {
     file.data.astro.frontmatter.layout =
-      file.data.astro.frontmatter.layout || "./src/layouts/markdown.astro";
+      file.data.astro.frontmatter.layout || "@layouts/markdown.astro";
   };
 };
 
