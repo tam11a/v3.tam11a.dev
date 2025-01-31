@@ -2,12 +2,24 @@
 import { defineConfig } from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
-
+import mdx from "@astrojs/mdx";
 import icon from "astro-icon";
+
+const setLayout = () => {
+  // @ts-ignore
+  return function (_, file) {
+    file.data.astro.frontmatter.layout =
+      file.data.astro.frontmatter.layout || "./src/layouts/markdown.astro";
+  };
+};
 
 // https://astro.build/config
 export default defineConfig({
+  markdown: {
+    remarkPlugins: [setLayout],
+  },
   integrations: [
+    mdx(),
     tailwind(),
     icon({
       include: {
