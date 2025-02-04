@@ -30,6 +30,7 @@ const experiences = await getCollection("featured");
               class={
                 "w-16 mb-4 rounded-md delay-100 shadow-2xl ease-in-out transition-all duration-150"
               }
+              transition:name={`work-${id}`}
             />
             <h2 class="text-sm max-w-44 mb-1 shadow text-wrap text-center">
               {name}

@@ -2,7 +2,10 @@
 import { Image } from "astro:assets";
 ---
 
-<header class="container flex items-center justify-start gap-2 py-20">
+<header
+  class="flex w-full max-w-[90vw] md:container items-center justify-start gap-2 my-20 md:sticky md:top-5 mx-5 md:mx-auto md:backdrop-blur-xl md:bg-slate-600/5 md:border md:border-slate-800 md:rounded-full !px-10 !py-1 z-50"
+  transition:name="header"
+>
   <a href="/">
     <Image
       src="/tam.svg"
@@ -11,7 +14,8 @@ import { Image } from "astro:assets";
       loading="eager"
       width={120}
       height={120}
-      class="w-20 h-auto"
+      class="w-16 h-auto"
+      transition:name="my-logo"
     />
   </a>
   <div></div>
