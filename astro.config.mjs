@@ -5,6 +5,8 @@ import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import icon from "astro-icon";
 
+import sitemap from "@astrojs/sitemap";
+
 const setLayout = () => {
   // @ts-ignore
   return function (_, file) {
@@ -18,6 +20,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [setLayout],
   },
+  site: "https://tam11a.dev",
   integrations: [
     mdx(),
     tailwind(),
@@ -27,5 +30,6 @@ export default defineConfig({
         "vscode-icons": ["*"],
       },
     }),
+    sitemap(),
   ],
 });
