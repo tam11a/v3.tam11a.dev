@@ -2,6 +2,7 @@
 import "./global.css";
 import Header from "../_components/header/secondary.astro";
 import Footer from "../_components/footer/main.astro";
+import { ClientRouter } from "astro:transitions";
 
 const {
   title = "Ibrahim Sadik Tamim - tam11a ✦ coder, designer, thinker",
@@ -24,6 +25,7 @@ const {
     <meta property="og:url" content="https://tam11a.dev" />
     <meta property="og:type" content="website" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <ClientRouter fallback="swap" />
   </head>
   <body>
     <svg
@@ -40,7 +42,7 @@ const {
     >
     <Header />
     <main class="container">
-      <slot />
+      <slot transition:animate="slide" />
     </main>
     <Footer />
   </body>

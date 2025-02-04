@@ -6,11 +6,22 @@ import Footer from "../_components/footer/main.astro";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
+import { ClientRouter } from "astro:transitions";
 const experiences = await getCollection("featured");
 
 const {
   title = "Ibrahim Sadik Tamim - tam11a ✦ coder, designer, thinker",
-  frontmatter: { name, logo, timeline, description, role, type, ref_urls, url },
+  frontmatter: {
+    id,
+    name,
+    logo,
+    timeline,
+    description,
+    role,
+    type,
+    ref_urls,
+    url,
+  },
 } = Astro.props;
 
 const slug = url.split("/").pop();
@@ -40,6 +51,7 @@ const next = experiences[nextIndex];
     <meta property="og:url" content="https://tam11a.dev" />
     <meta property="og:type" content="website" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <ClientRouter fallback="swap" />
   </head>
   <body>
     <svg
@@ -64,6 +76,7 @@ const next = experiences[nextIndex];
           width="256"
           height="256"
           class={"w-24 mb-2 rounded-md shadow"}
+          transition:name={`work-${id}`}
         />
         <h1 class="text-2xl font-medium shadow text-white normal-case">
           {name}
@@ -110,7 +123,7 @@ const next = experiences[nextIndex];
           </>
         )
       }
-      <slot />
+      <slot transition:animate="slide" />
 
       <p
         class="mt-20 text-offcolor font-semibold uppercase text-center text-sm"

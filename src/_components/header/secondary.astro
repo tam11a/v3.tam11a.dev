@@ -2,7 +2,10 @@
 import { Image } from "astro:assets";
 ---
 
-<header class="container flex items-center justify-center gap-2 pt-20">
+<header
+  class="container flex items-center justify-center gap-2 pt-20"
+  transition:name="header"
+>
   <a href="/">
     <Image
       src="/tam.svg"
@@ -12,6 +15,7 @@ import { Image } from "astro:assets";
       width={120}
       height={120}
       class="w-20 h-auto"
+      transition:name="my-logo"
     />
   </a>
   <div></div>
