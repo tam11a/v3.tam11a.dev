@@ -23,7 +23,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [setLayout],
   },
-  site: "https://tam11a.dev",
+  site: "https://v3.tam11a.dev",
   integrations: [
     mdx(),
     tailwind(),
